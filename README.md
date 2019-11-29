@@ -67,7 +67,7 @@ docker-compose up -d
 
 Finally, you need to create the database. In another terminal, run:
 ```
-docker-compose run app rake db:create
+docker-compose run app rake db:drop db:create db:migrate
 ```
 
 That’s it. Your app should now be running on port 3000 on your Docker daemon. If you’re using Docker Machine, then `docker-machine ip MACHINE_VM` returns the Docker host IP address.
